@@ -1,42 +1,34 @@
 <!DOCTYPE html>
-<meta
-  name="viewport"
-  content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
-/>
-<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/examples/vendor/aframe/build/aframe.min.js"></script>
-<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"></script>
-<!-- three.js library -->
-<script src="./js/vendor/three.js/build/three.min.js"></script>
-<script src="./js/vendor/three.js/examples/js/libs/stats.min.js"></script>
-<!-- ar.js -->
-<script src="./js/build/ar.js"></script>
+<head>
+  <meta
+    name="viewport"
+    content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
+  />
+  <!-- ar.js -->
+  <!-- <script src="./js/build/aframe-ar.js"></script> -->
+  <!-- <script src="./js/build/aframe-ar.min.js"></script> -->
+  <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
+  <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
+  /
+  <!-- three.js library -->
+  <!-- <script src="./js/vendor/three.js/build/three.min.js"></script> -->
+  <!-- <script src="./js/vendor/three.js/examples/js/libs/stats.min.js"></script> -->
 
-<script>
-  THREEx.ArToolkitContext.baseURL = "https://newkritsada.github.io/ar-project/";
-</script>
+  <script>
+    THREEx.ArToolkitContext.baseURL =
+      "https://newkritsada.github.io/ar-project/";
+  </script>
+</head>
 
-
-  <body style="margin : 0px; overflow: hidden;">
-    <!-- <a-scene embedded arjs='sourceType: webcam;'>
-
-      <a-sphere position="0 0.5 0" radius="0.5" color="#EF2D5E"></a-sphere>
-      <a-plane position="0 0 0" rotation="-90 0 0" width="1" height="1" color="#7BC8A4"></a-plane>
-      <a-marker-camera preset='hiro'></a-marker-camera>
-  </a-scene> -->
-
-    <a-scene embedded arjs artoolkit>
-      <a-marker-camera preset="hiro" type='pattern' patternUrl='./pattern/pattern-qr.patt'></a-marker-camera>
-      <a-marker preset="hiro">
-        <a-entity
-          position="0 0 0"
-          scale="0.05 0.05 0.05"
-          patternUrl='./pattern/pattern-qr.patt'
-          gltf-model="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/scene.gltf"
-        ></a-entity>
-      </a-marker>
-      <a-entity camera></a-entity>
-    </a-scene>
-<!-- <script src="./js/main.js"></script> -->
-
-  </body>
-
+<body style="margin : 0px; overflow: hidden;">
+  <a-scene embedded arjs>
+  <a-marker preset="hiro">
+      <a-entity
+      position="0 -1 0"
+      scale="0.05 0.05 0.05"
+      gltf-model="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/scene.gltf"
+      ></a-entity>
+  </a-marker>
+  <a-entity camera></a-entity>
+  </a-scene>
+</body>
