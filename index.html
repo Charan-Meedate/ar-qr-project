@@ -15,7 +15,14 @@
 
 
   <body style="margin : 0px; overflow: hidden;">
-    <!-- <a-scene embedded arjs artoolkit>
+    <!-- <a-scene embedded arjs='sourceType: webcam;'>
+
+      <a-sphere position="0 0.5 0" radius="0.5" color="#EF2D5E"></a-sphere>
+      <a-plane position="0 0 0" rotation="-90 0 0" width="1" height="1" color="#7BC8A4"></a-plane>
+      <a-marker-camera preset='hiro'></a-marker-camera>
+  </a-scene> -->
+
+    <a-scene embedded arjs='sourceType: webcam;' artoolkit>
       <a-marker-camera preset="hiro" type='pattern' patternUrl='./pattern/pattern-qr.patt'></a-marker-camera>
       <a-marker preset="hiro">
         <a-entity
@@ -26,8 +33,8 @@
         ></a-entity>
       </a-marker>
       <a-entity camera></a-entity>
-    </a-scene> -->
-<script src="./js/main.js"></script>
+    </a-scene>
+<!-- <script src="./js/main.js"></script> -->
 
   </body>
 
