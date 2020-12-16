@@ -3,6 +3,8 @@
   name="viewport"
   content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
 />
+<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/examples/vendor/aframe/build/aframe.min.js"></script>
+<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"></script>
 <!-- three.js library -->
 <script src="./js/vendor/three.js/build/three.min.js"></script>
 <script src="./js/vendor/three.js/examples/js/libs/stats.min.js"></script>
@@ -22,7 +24,7 @@
       <a-marker-camera preset='hiro'></a-marker-camera>
   </a-scene> -->
 
-    <a-scene embedded arjs='sourceType: webcam;' artoolkit>
+    <a-scene embedded arjs artoolkit>
       <a-marker-camera preset="hiro" type='pattern' patternUrl='./pattern/pattern-qr.patt'></a-marker-camera>
       <a-marker preset="hiro">
         <a-entity
