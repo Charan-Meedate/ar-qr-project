@@ -5,30 +5,30 @@
     content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
   />
   <!-- ar.js -->
-  <!-- <script src="./js/build/aframe-ar.js"></script> -->
-  <!-- <script src="./js/build/aframe-ar.min.js"></script> -->
-  <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
-  <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
-  /
-  <!-- three.js library -->
-  <!-- <script src="./js/vendor/three.js/build/three.min.js"></script> -->
-  <!-- <script src="./js/vendor/three.js/examples/js/libs/stats.min.js"></script> -->
+  <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
+  <!-- we import arjs version without NFT but with marker + location based support -->
+  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
 
-  <script>
+  <!-- <script>
     THREEx.ArToolkitContext.baseURL =
       "https://newkritsada.github.io/ar-project/";
-  </script>
+  </script> -->
 </head>
 
 <body style="margin : 0px; overflow: hidden;">
   <a-scene embedded arjs>
-  <a-marker preset="hiro">
-      <a-entity
-      position="0 -1 0"
+    <!-- <a-marker-camera preset='custom' url='./pattern/pattern-qr.patt'> -->
+
+  
+  <a-marker preset='custom' type='pattern'  url="./pattern/pattern-qr.patt"  >
+    <a-box position='0 0.5 0' material='color: red;'></a-box>
+      <!-- <a-entity
+      position="0 0 0"
       scale="0.05 0.05 0.05"
       gltf-model="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/scene.gltf"
-      ></a-entity>
+      ></a-entity> -->
   </a-marker>
+<!-- </a-marker-camera> -->
   <a-entity camera></a-entity>
   </a-scene>
 </body>
